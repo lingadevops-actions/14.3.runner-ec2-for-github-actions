@@ -39,6 +39,6 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 
 #kubectl installation 
-curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.34.1/2025-09-19/bin/darwin/amd64/kubectl
-chmod +x ./kubectl
-sudo mv kubectl /usr/local/bin/kubectl
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.34.1/2025-09-19/bin/linux/amd64/kubectl
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
