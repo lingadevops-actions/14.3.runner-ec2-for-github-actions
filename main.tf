@@ -19,6 +19,16 @@ resource "aws_instance" "runner_ec2" {
   )
 }
 
+resource "aws_route53_record" "runner_ec2_r53" {
+    zone_id = var.zone_id
+    name    = "runner.${var.domain_name}"
+    type    = "A"
+    ttl     = 1
+    records = [aws_instance.runner_ec2.public_ip]
+    allow_overwrite = true
+}
+
+
 resource "aws_security_group" "main_sg" {
   name        =  "${var.project}-${var.environment}-runner-sg"
   description = "Created to attatch runner"

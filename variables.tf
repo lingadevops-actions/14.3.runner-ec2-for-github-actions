@@ -17,3 +17,6 @@ variable "zone_id" {
   default     = "Z012785114HGZTDQ8KSQH"
   description = "description"
 }
+variable "domain_name" {
+    default = "lithesh.shop"
+}
